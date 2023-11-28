@@ -2,7 +2,7 @@ let input = document.getElementById('inputbox');
 let buttons = document.querySelectorAll('button');
 let result = document.querySelector(".result")
 let string = "";
-let num;
+
 
 console.log(result)
 
@@ -12,12 +12,12 @@ arr.forEach(button =>{
         
         if(J.target.innerHTML=='='){
             result.innerHTML = input.value
-            num = eval(string)
-            if(Number.isInteger(num)==true){
-                input.value= num
+            string = eval(string)
+            if(Number.isInteger(string)==true){
+                input.value= string
             }
             else{
-                string = num.toFixed(2)
+                string = string.toFixed(2)
                 input.value= string
             }
         }
